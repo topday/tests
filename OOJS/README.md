@@ -1,3 +1,3 @@
 ##JavaScript tricks 
 
-- [returnFunction] - `boo() or boo()()`; Which way is better?
+- [returnFunction](https://github.com/topday/tests/blob/master/OOJS/returnFunction.js) - `boo() or boo()()`; Which way is better?
