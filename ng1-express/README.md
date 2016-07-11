@@ -37,7 +37,7 @@ cd ng1-express/
 
 npm install
 
-npm start
+npm start   #check http://localhost:3001
 ```
 
 
