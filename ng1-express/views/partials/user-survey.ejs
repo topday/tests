@@ -1,0 +1,49 @@
+<style>
+  form div {
+    padding: 10px;
+  }
+</style>
+<div ng-controller="userSurvey">
+  <form class="simple-form" name="survey" class="css-form" role="form" novalidate>
+    <div  ng-hide="survey.$submitted && survey.$valid">
+      <div class="form-group">
+        <label for="email">Name: </label>
+        <input type="text" ng-model="user.name" name="name" required/>
+        <span ng-show="survey.name.$touched && survey.name.$invalid">The name is required.</span>
+      </div>
+
+      <div  class="form-group">
+        <label>Gender: </label>
+        <input type="radio" name="gender" ng-model="user.gender" value="male" required/> Male
+        <input type="radio" name="gender" ng-model="user.gender" value="female" required/> Female
+      </div>
+
+      <div class="form-group">
+        <label>Age:</lable> 
+        <input type="number" ng-model="user.age" name="age" required/>
+        <span ng-show="survey.age.$touched && survey.age.$invalid">The age is invalid.</span>
+      </div>
+
+      <div class="form-group">
+        <label>Country:</label> 
+        <select ng-model="user.country" name="country" required>
+          <option ng-repeat="country in countries">{{country}}</optioin>
+        </select>
+        <span ng-show="survey.country.$touched && survey.country.$invalid">Country is invalid.</span>
+      </div>
+
+      <input type="button" ng-click="reset()" value="Reset" />
+      <input type="submit" ng-click="update(user)" ng-disabled="survey.$invalid" value="Save" />
+    </div>
+  </form>
+
+  <div  ng-show="survey.$submitted && survey.$valid">
+    <h3>Thank you {{context.name | capitalize}} for participating this survey.</h3>
+
+    Name:     {{context.name | capitalize}} <br />
+    Gender:   {{context.gender | capitalize}} <br />
+    Age:      {{context.age}} <br />
+    Country:  {{context.country}} <br />
+
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div ng-controller="userHistry" class="container" >
+
+  <div class="row">
+      <div class="col-sm-2">Name</div>
+      <div class="col-sm-2">Gender</div>
+      <div class="col-sm-2">Age</div>
+      <div class="col-sm-2">Country</div>
+      <div class="col-sm-2">Date Time</div>
+  </div>
+  <div ng-repeat="survey in surveys" class="row">
+      <div class="col-sm-2">{{survey.name | capitalize}}</div>
+      <div class="col-sm-2">{{survey.gender | capitalize}}</div>
+      <div class="col-sm-2">{{survey.age}}</div>
+      <div class="col-sm-2">{{survey.country}}</div>
+      <div class="col-sm-2">{{survey.dateCreated}}</div>
+  </div>
+</div>
