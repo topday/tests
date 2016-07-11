@@ -31,7 +31,7 @@ Express installed under EJS templating engine. The framework is designed to be a
 
 ## Quick Start
 ```
-git clone https://github.com/topday/tests
+git clone https://github.com/topday/tests.git
 
 cd ng1-express/
 
