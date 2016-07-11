@@ -29,8 +29,12 @@ Express installed under EJS templating engine. The framework is designed to be a
 - Simple templating engine designed to minimize css usage and ensure normalized cross-browsers behaviour
 
 
-## Start cloned project
+## Quick Start
 ```
+git clone https://github.com/topday/tests
+
+cd ng1-express/
+
 npm install
 
 npm start
@@ -49,7 +53,7 @@ build project file structure with css 'sass' preprocess and 'ejs' templating eng
 express -f -c sass -e #current default ejs version < 1. Many important features are not avilable yet.
 ```
 
-#install and store angular and the rest tool
+install and store angular and the rest tool
 ```
 npm install angular express express-generator jquery2 bootstrap mongodb monk --save
 ```
