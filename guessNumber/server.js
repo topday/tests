@@ -7,6 +7,7 @@ const spawn = require('child_process').spawn;
 const build = spawn('ng', ['build', '-w']);
 const ajaxController = require('./server/controller/Ajax');
 const commsController = require('./server/controller/Comms');
+const session = require('express-session');
 
 var port = '3000';
 
@@ -24,9 +25,11 @@ const api = require('./server/routes/api');
 
 const app = express();
 
+app.use(session({secret: 'no secret', cookie: {maxAge: 60000}}))
+
 // Parsers for POST data
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Point static path to dist
 app.use(express.static(path.join(__dirname, 'dist')));
@@ -36,11 +39,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', api);
 
 // Catch all other routes and return the index file
-app.get('/ajax/*', (req, res) => {
+app.post('/ajax/*', (req, res) => {
   ajaxController(req, res);
 });
 
-// Catch all other routes and return the index file
 app.get('/comms/*', commsController);
 app.post('/comms/*', commsController);
 

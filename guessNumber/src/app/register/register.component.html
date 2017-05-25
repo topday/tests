@@ -1,0 +1,28 @@
+<form (ngSubmit)="onSubmit()" #Register="ngForm"  >
+  <div class="form-group">
+    <label for="name">Name</label> 
+    <input type="text" class="form-control" [(ngModel)]="model.name" [ngModelOptions]="{standalone: true}" id="name" required>
+  </div>
+  <div class="form-group">
+    <label for="surname">Surname</label> 
+    <input type="text" class="form-control" [(ngModel)]="model.surname" [ngModelOptions]="{standalone: true}"  id="surname" required>
+  </div>
+  <div class="form-group">
+    <label for="town">Town</label> 
+    <input type="text" class="form-control" [(ngModel)]="model.town" [ngModelOptions]="{standalone: true}"  id="town">
+  </div>
+  <div class="form-group">
+    <label for="email">E-mail</label> 
+    <input type="email" class="form-control" [(ngModel)]="model.email" [ngModelOptions]="{standalone: true}"  id="email" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label> 
+    <input type="password" class="form-control" [(ngModel)]="model.password" [ngModelOptions]="{standalone: true}" id="password" required>
+  </div>
+  <div class="form-group">
+    <label for="repeat-password">Repeat Password</label> 
+    <input type="password" class="form-control" [(ngModel)]="model.repeatPassword" [ngModelOptions]="{standalone:  true}" id="repeat-password" required>
+  </div>
+
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>

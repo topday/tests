@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()" >
+  <div class="form-group">
+    <label for="email">Guess which number I am thinking</label> 
+    <input type="number" [(ngModel)]="playersNumber" [ngModelOptions]="{standalone: true}" class="form-control" id="email" required>
+  </div>
+  <div>I am thinking between 1 and {{computerMax}}</div>
+  <div>total guess {{totalGuess}} of 3.</div>
+  <div [hidden]="!isFail" class="alert alert-danger">Sorry, you lost.</div>
+  <div [hidden]="!isWon" class="alert alert-info">Congratulations! You Won!</div>
+  <div [hidden]="isWon">
+    <button type="submit" class="btn btn-success">Submit</button>
+  </div>
+</form>

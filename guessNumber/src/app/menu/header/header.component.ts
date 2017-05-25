@@ -28,6 +28,11 @@ const MENU: Menu[] = [
       title: 'Login',
       child: []
     },
+    { 
+      url: '/log-out', 
+      title: 'Logout',
+      child: []
+    },
 ];
 
 @Component({
