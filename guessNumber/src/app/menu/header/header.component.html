@@ -1,0 +1,24 @@
+<nav>
+  <ul>
+    <li *ngFor="let item of menu; let i = index" class="item{{i}}" [class.selected]="item.url === routeController">
+      <a [class.selected]="item.url === routeController" href="{{item.url}}">{{item.title}}</a>
+      <ul [hidden]="item.child.length === 0" [class.selected]="item.url === routeController">
+        <li *ngFor="let node of item.child; let j = index" class="node{{j}}"  >
+          <a href="{{node.url}}" [class.selected]="node.url === route"  >{{node.title}}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+<nav class="bg">
+  <ul>
+    <li *ngFor="let item of menu; let i = index" class="item{{i}}" [class.selected]="item.url === routeController">
+      <a class="bg" [class.selected]="item.url === routeController" href="{{item.url}}">.</a>
+    </li>
+  </ul>
+</nav>
+
+<app-header-design></app-header-design>
+

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: italiana;
+    src: url(/fonts/Italiana-Regular.ttf);
+}
+@font-face {
+    font-family: arizonia;
+    src: url(/fonts/Arizonia-Regular.ttf);
+}
+@font-face {
+    font-family: alex;
+    src: url(/fonts/AlexBrush-Regular.ttf);
+}
+@font-face {
+    font-family: calligraffitti;
+    src: url(/fonts/Calligraffitti-Regular.ttf);
+}

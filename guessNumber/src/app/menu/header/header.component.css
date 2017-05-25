@@ -1,0 +1,161 @@
+nav {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  height: 100%;
+  z-index: 5;
+}
+
+nav.bg {
+  z-index: 3;
+}
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: italiana;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  nav > ul {
+    position: absolute;
+    z-index: 10;
+  }
+
+    nav > ul > li {
+      width: 310px; 
+    }
+
+    nav > ul > li > a {
+      z-index: 10;
+    }
+
+
+    nav ul li a {
+      padding-top: 4px;
+      padding-right: 5px;
+      display: block;
+      text-decoration: none;
+      color: #333;
+      font-weight: 900;
+    }
+
+    nav > ul > li > a {
+      margin-left: 30px;
+      padding-top: 0;
+      line-height: 1.4em;
+    }
+
+    nav li a.bg { 
+      color: white !important; 
+    }
+
+    nav > ul > li > a.selected {
+      /*color: #4B0082;*/
+      color: #8B0000;
+      opacity: 0.7; 
+    }
+
+  nav > ul > li > ul > li > a.selected {
+    opacity: 0.9; 
+  }
+
+  nav > ul > li > ul > li > a {
+    opacity: 0.6; 
+  }
+
+
+  nav.bg li a.selected {
+    border-bottom: 1px solid #F0E68C;
+    opacity: 0.4; 
+  }
+
+  nav.bg > ul > li.selected:after {
+    content: "";
+    width: 1px;
+    height: 500%;
+    position: absolute;
+    right: 0%;
+    margin-top: -15px;
+    opacity: 0.9; 
+    background: -moz-linear-gradient(top,  rgba(240,230,140,1) 0%, rgba(255,255,255,0.99) 80%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(top,  rgba(240,230,140,1) 0%,rgba(255,255,255,0.99) 80%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to bottom,  rgba(240,230,140,1) 0%,rgba(255,255,255,0.99) 80%,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0e68c', endColorstr='#00ffffff',GradientType=0 );
+  }
+
+  nav li.item0 { text-indent: 70px; }
+  nav li.item1 { text-indent: 80px; }
+  nav li.item2 { text-indent: 78px; }
+  nav li.item3 { text-indent: 60px; }
+  nav li.item4 { text-indent: 20px; }
+  nav li.item5 { text-indent: 10px; }
+
+  nav > ul > li > ul.selected {
+    display: inline-block !important;
+  }
+
+  nav li.item0 ul, nav li.item1 ul, nav li.item2 ul, nav li.item3 ul {
+    position: absolute; 
+    font-size: 13px;
+    left: 170px;
+    display: none;
+  }
+
+  nav > ul > li > ul > li > a {
+/*    color: #00008B; */
+    color: #234;
+  }
+
+  nav > ul > li.item0 > ul {
+    top: -1px; 
+  }
+  nav li.item0 ul li.node0 { text-indent: 10px;  }
+  nav li.item0 ul li.node1 { text-indent: 15px;  }
+  nav li.item0 ul li.node2 { text-indent: 9px;  }
+  nav li.item0 ul li.node3 { text-indent: 0px;  }
+  nav li.item0 ul li.node4 { text-indent: -10px;  }
+  nav li.item0 ul li.node5 { text-indent: -30px;  }
+  nav li.item0 ul li.node6 { text-indent: -65px;  }
+  nav li.item0 ul li.node7 { text-indent: -110px;  }
+  nav li.item0 ul li.node8 { text-indent: -145px;  }
+  nav li.item0 ul li.node9 { text-indent: -200px;  }
+
+  nav > ul > li.item1 > ul {
+    top: 22px; 
+  }
+  nav li.item1 ul li.node0 { text-indent: 20px;  }
+  nav li.item1 ul li.node1 { text-indent: 15px;  }
+  nav li.item1 ul li.node2 { text-indent: 9px;  }
+  nav li.item1 ul li.node3 { text-indent: 0px;  }
+  nav li.item1 ul li.node4 { text-indent: -20px;  }
+  nav li.item1 ul li.node5 { text-indent: -45px;  }
+  nav li.item1 ul li.node6 { text-indent: -75px;  }
+  nav li.item1 ul li.node7 { text-indent: -110px;  }
+  nav li.item1 ul li.node8 { text-indent: -145px;  }
+  nav li.item1 ul li.node9 { text-indent: -200px;  }
+
+  nav > ul > li.item2 > ul {
+    top: 44px; 
+  }
+  nav li.item2 ul li.node0 { text-indent: 20px;  }
+  nav li.item2 ul li.node1 { text-indent: 10px;  }
+  nav li.item2 ul li.node2 { text-indent: -10px;  }
+  nav li.item2 ul li.node3 { text-indent: -35px;  }
+  nav li.item2 ul li.node4 { text-indent: -80px;  }
+
+  nav > ul > li.item3 > ul {
+    top: 67px; 
+  }
+  nav li.item3 ul li.node0 { text-indent: 20px;  }
+  nav li.item3 ul li.node1 { text-indent: 0px;  }
+  nav li.item3 ul li.node2 { text-indent: -25px;  }
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 360px) { 
+  nav > ul > li {
+    width: 340px; 
+  }
+}

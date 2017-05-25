@@ -1,0 +1,71 @@
+@font-face {
+    font-family: arizonia;
+    src: url(/fonts/Arizonia-Regular.ttf);
+}
+
+.menu-center {
+  font-family: arizonia;
+  font-size: 20px;
+  position: absolute;
+  z-index: 13;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  border: 1px solid #F0E68C;
+  background-color: #FFF;
+  left: -20px;
+  top: -10px; 
+  line-height: 110px;
+  text-indent: 25px;
+  box-shadow: 5px 15px 50px #F0E68C;
+}
+
+.menu-center a {
+  color: #111;
+}
+
+.menu-bottom-bg {
+  position: absolute;
+  width: 320px;
+  height: 100%;
+}
+
+  .menu-bottom-bg .help-box {
+    position: absolute;
+    bottom: 2%;
+    left: 10%;
+    width: 80%;
+    height: 30%;
+    border-left: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+    padding: 5%;
+    z-index: 10;
+  }
+
+  .menu-bottom-bg .help-box.bg {
+    z-index: 1;
+    left: 11%;
+    height: 29%;
+  }
+
+  .menu-bottom-bg .help-box.bg .q {
+    font-size: 7em;
+    font-family: italiana;
+    text-align: right;
+    color: #EEE;
+  }
+
+  .menu-bottom-bg .help-box.bg .meter {
+
+    background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(64,58,45,0) 25%, rgba(255,232,178,0.65) 100%);
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(64,58,45,0) 25%,rgba(255,232,178,0.65) 100%);
+    background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(64,58,45,0) 25%,rgba(255,232,178,0.65) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6ffe8b2',GradientType=1 );
+    height: 2px;
+    width: 100%;
+    margin-top: 7%;
+    display: inline-block;
+    right: 0;
+  }
